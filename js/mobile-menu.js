@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
-  const navListRef = document.querySelector(".class-navigation-list");
-  const headerRef = document.querySelector(".class-header");
-  const navigationRef = document.querySelector(".class-navigation");
+  const navListRef = document.querySelector(".o-g-navigation-list");
+  const headerRef = document.querySelector(".o-g-header");
+  const navigationRef = document.querySelector(".o-g-navigation");
 
   menuBtnRef.addEventListener("click", () => {
     menuBtnRef.classList.toggle("is-open");
@@ -11,18 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
     navigationRef.classList.toggle("is-open");
   });
 
-  document.querySelectorAll(".class-navigation-link").forEach((n) =>
+  document.querySelectorAll(".o-g-navigation-link").forEach((n) =>
     n.addEventListener("click", () => {
       navListRef.classList.remove("is-open");
       menuBtnRef.classList.remove("is-open");
       headerRef.classList.remove("is-open");
       navigationRef.classList.remove("is-open");
-    })
+    }),
   );
 });
 function toggleAnswer(element) {
   const answer = element.nextElementSibling;
-  const buttonImg = element.querySelector(".class-toggle-button img");
+  const buttonImg = element.querySelector(".o-g-toggle-button img");
 
   answer.classList.toggle("open");
 
